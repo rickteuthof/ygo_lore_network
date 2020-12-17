@@ -53,7 +53,7 @@ series = {
     ],
 }
 
-names = {
+cards = {
     serie: {
         archetype: [
             card["name"]
@@ -64,4 +64,9 @@ names = {
     } for serie in sorted(series)
 } 
 
-print(names)
+for serie in cards:
+    print(serie)
+    for archetype in cards[serie]:
+        print(archetype)
+        for card in cards[serie][archetype]:
+            print(card)
